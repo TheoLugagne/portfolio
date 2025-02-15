@@ -1,9 +1,11 @@
-<div class="profile-container">
-    <div class="profile-content">
-        <img [src]="profile.image" [alt]="profile.name" class="profile-image">
-        <div class="profile-text">
-            <h1 class="profile-name">{{profile.name}}</h1>
-            <p class="profile-description">{{profile.description}}</p>
+<app-section title="Profile" [showTitle]="false">
+    <div class="profile-container">
+        <div class="profile-content">
+            <img [src]="profile.image" [alt]="profile.name" class="profile-image">
+            <div class="profile-text">
+                <h1 class="profile-name">{{profile.name}}</h1>
+                <p class="profile-description">{{profile.description}}</p>
+            </div>
         </div>
     </div>
-</div>
+</app-section>
