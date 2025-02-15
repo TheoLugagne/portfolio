@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EducationEltComponent } from './education-elt.component';
+import { TimeLocEltComponent } from './time-loc-elt.component';
 
-describe('EducationEltComponent', () => {
-  let component: EducationEltComponent;
-  let fixture: ComponentFixture<EducationEltComponent>;
+describe('TimeLocEltComponent', () => {
+  let component: TimeLocEltComponent;
+  let fixture: ComponentFixture<TimeLocEltComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [EducationEltComponent]
+      imports: [TimeLocEltComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(EducationEltComponent);
+    fixture = TestBed.createComponent(TimeLocEltComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

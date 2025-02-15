@@ -1,17 +1,17 @@
 import { Component } from '@angular/core';
 import { NgFor } from '@angular/common';
-import { EducationEltComponent } from './education-elt/education-elt.component';
+import { TimeLocEltComponent } from '../time-loc-elt/time-loc-elt.component';
 import { SectionComponent } from '../section/section.component';
 
 @Component({
   selector: 'app-education',
   standalone: true,
-  imports: [EducationEltComponent, SectionComponent, NgFor],
+  imports: [TimeLocEltComponent, SectionComponent, NgFor],
   templateUrl: './education.component.html',
   styleUrl: './education.component.scss'
 })
 export class EducationComponent {
-  elts: EducationEltComponent[] = [
+  elts: TimeLocEltComponent[] = [
     {
       name: 'BUT Informatique',
       description: '3eme année de BUT informatique spécialisé en Réalisation d\'applications : conception, développement, validation',

@@ -1,0 +1,13 @@
+<div class="time-loc-elt-item">
+    <div class="time-loc-elt-header">
+      <h3 class="time-loc-elt-name">{{name}}</h3>
+      <div class="time-loc-elt-dates">
+        <span class="date-start">{{dateStart | date:'MMM yyyy'}}</span>
+        <span *ngIf="dateEnd"> - {{dateEnd | date:'MMM yyyy'}}</span>
+        <span *ngIf="!dateEnd"> - Present</span>
+      </div>
+    </div>
+    <p class="time-loc-elt-description">{{description}}</p>
+    <p class="time-loc-elt-location">{{location}}</p>
+  </div>
+  
