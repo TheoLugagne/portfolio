@@ -1,0 +1,9 @@
+<app-section title="Formation">
+  <app-education-elt 
+    *ngFor="let elt of elts"
+    [name]="elt.name"
+    [description]="elt.description"
+    [dateStart]="elt.dateStart"
+    [dateEnd]="elt.dateEnd">
+  </app-education-elt>
+</app-section>
