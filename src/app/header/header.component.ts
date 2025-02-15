@@ -1,45 +1,25 @@
 import { Component } from '@angular/core';
-import {MenubarModule} from 'primeng/menubar';
-import {MenuItem} from 'primeng/api';
+import { CommonModule } from '@angular/common';
+
+interface NavItem {
+  href: string;
+  label: string;
+}
 
 @Component({
   selector: 'app-header',
-  imports: [MenubarModule,],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+  styleUrls: ['./header.component.scss'],
+  standalone: true,
+  imports: [CommonModule]
 })
 export class HeaderComponent {
-  items: MenuItem[] = [
-    {
-      id: "menu-item-1",
-      label: "Accueil",
-      styleClass: "ui-menu-section-title",
-      routerLink: "#"
-    },
-    {
-      id: "menu-item-2",
-      label: "Formation",
-      styleClass: "ui-menu-section-title",
-      routerLink: "#"
-    },
-    {
-      id: "menu-item-3",
-      label: "Experiences",
-      styleClass: "ui-menu-section-title",
-      routerLink: "#"
-    },
-    {
-      id: "menu-item-4",
-      label: "Projets",
-      styleClass: "ui-menu-section-title",
-      routerLink: "#"
-    },
-    {
-      id: "menu-item-4",
-      label: "Contact",
-      styleClass: "ui-menu-section-title",
-      routerLink: "#"
-    },
-  ]
-
+  navItems: NavItem[] = [
+    { href: '#profile', label: 'About' },
+    { href: '#experience', label: 'Experience' },
+    { href: '#skills', label: 'Skills' },
+    { href: '#education', label: 'Education' },
+    { href: '#projects', label: 'Projects' },
+    { href: '#contact', label: 'Contact' }
+  ];
 }
