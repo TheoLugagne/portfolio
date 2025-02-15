@@ -11,6 +11,7 @@ import { DatePipe, NgIf } from '@angular/common';
 export class EducationEltComponent {
   @Input() name: string = '';
   @Input() description: string = '';
+  @Input() location: string = "";
   @Input() dateStart: Date = new Date();
   @Input() dateEnd: Date | null = null;
 }
