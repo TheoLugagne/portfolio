@@ -1,0 +1,11 @@
+<div class="education-item">
+  <div class="education-header">
+    <h3 class="education-name">{{name}}</h3>
+    <div class="education-dates">
+      <span class="date-start">{{dateStart | date:'MMM yyyy'}}</span>
+      <span *ngIf="dateEnd"> - {{dateEnd | date:'MMM yyyy'}}</span>
+      <span *ngIf="!dateEnd"> - Present</span>
+    </div>
+  </div>
+  <p class="education-description">{{description}}</p>
+</div>
