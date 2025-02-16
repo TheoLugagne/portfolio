@@ -1,0 +1,45 @@
+.footer-container {
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0;
+}
+
+.footer-links li {
+  display: inline;
+  margin: 0 1rem;
+}
+
+.footer-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background: #2c3e50; /* Match the GitHub button background */
+  color: white; /* Set text color to white */
+  border-radius: 20px;
+  text-decoration: none; /* Remove underline */
+  font-size: 0.9rem;
+  transition: all 0.2s;
+  border: none; /* Remove default button border */
+  cursor: pointer; /* Change cursor to pointer */
+
+  .icon {
+    margin-right: 0.5rem; /* Space between icon and text */
+  }
+
+  &:hover {
+    background: #3498db; /* Change background on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  a {
+    color: white; /* Set link color to white */
+    text-decoration: none; /* Remove underline from link */
+  }
+}

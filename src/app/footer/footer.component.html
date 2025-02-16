@@ -1,1 +1,13 @@
-<p>footer works!</p>
+<div class="footer-container">
+  <p>Contact Me:</p>
+  <ul class="footer-links">
+    <li *ngFor="let link of contactLinks">
+      <button class="footer-button" [attr.download]="link.label === 'Download CV' ? 'CV_Theo_Lugagne.pdf' : null">
+        <a [href]="link.url" target="_blank" rel="noopener noreferrer">
+          <i class="icon" [ngClass]="getIconClass(link.label)"></i>
+          {{ link.label }}
+        </a>
+      </button>
+    </li>
+  </ul>
+</div>
