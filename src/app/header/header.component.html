@@ -1,5 +1,11 @@
 <nav class="navbar">
-    <ul class="nav-list">
+    <!-- <div class="navbar-brand">My Portfolio</div> -->
+    <div class="hamburger" (click)="toggleMenu()">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+    <ul class="nav-list" [class.active]="menuOpen">
         <li class="nav-item" *ngFor="let item of navItems">
             <a [href]="item.href">{{ item.label }}</a>
         </li>

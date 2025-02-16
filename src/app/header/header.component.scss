@@ -15,6 +15,18 @@
         display: flex;
         justify-content: center;
         gap: 2rem;
+        flex-wrap: wrap;
+
+        @media (max-width: 768px) {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+
+            &.active {
+                display: flex;
+            }
+        }
     }
 
     .nav-item {
@@ -47,6 +59,24 @@
                     background-color: #000;
                 }
             }
+        }
+    }
+}
+
+.hamburger {
+    display: none;
+
+    @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+
+        .bar {
+            height: 3px;
+            width: 25px;
+            background-color: #666;
+            margin: 3px 0;
+            transition: all 0.3s ease;
         }
     }
 } 

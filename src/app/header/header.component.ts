@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 interface NavItem {
   href: string;
@@ -11,7 +12,7 @@ interface NavItem {
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
   standalone: true,
-  imports: [CommonModule]
+  imports: [CommonModule, RouterModule]
 })
 export class HeaderComponent {
   navItems: NavItem[] = [
@@ -22,4 +23,10 @@ export class HeaderComponent {
     { href: '#projects', label: 'Projects' },
     { href: '#contact', label: 'Contact' }
   ];
+
+  menuOpen = false;
+
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+  }
 }
