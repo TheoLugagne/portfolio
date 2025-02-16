@@ -1,0 +1,24 @@
+<app-section title="Projets">
+  <div class="projects-grid">
+    <div class="project-card" *ngFor="let project of projects">
+      <div class="project-image">
+        <img [src]="project.image" [alt]="project.title">
+      </div>
+      <div class="project-content">
+        <h3>{{project.title}}</h3>
+        <p>{{project.description}}</p>
+        <div class="project-footer">
+          <div class="project-skills">
+            <span class="skill-tag" *ngFor="let skill of project.skills" [style.background-color]="skill.color">
+                <!-- TODO add link to skill -->
+                {{skill.name}}
+            </span>
+          </div>
+          <a [href]="project.githubLink" target="_blank" class="github-button">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</app-section>

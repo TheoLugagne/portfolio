@@ -1,0 +1,55 @@
+.skills-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.skill-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);  // 2 columns on tablet
+  }
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;  // Single column on mobile
+  }
+}
+
+.skill-item {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+  height: 100%;  // Added to ensure consistent height
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
+
+.skill-header {
+  padding: 1rem;
+  border-bottom: 3px solid;
+  
+  h3 {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+}
+
+.skill-content {
+  padding: 1rem;
+  
+  p {
+    margin: 0;
+    color: #666;
+    line-height: 1.5;
+    
+    @media (max-width: 768px) {
+      font-size: 0.9rem;  // Slightly smaller text on mobile
+    }
+  }
+} 
