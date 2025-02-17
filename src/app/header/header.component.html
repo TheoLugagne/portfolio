@@ -7,7 +7,7 @@
     </div>
     <ul class="nav-list" [class.active]="menuOpen">
         <li class="nav-item" *ngFor="let item of navItems">
-            <a [href]="item.href">{{ item.label }}</a>
+            <a (click)="scrollToSection(item.href)" href="javascript:void(0)">{{ item.label }}</a>
         </li>
     </ul>
 </nav>

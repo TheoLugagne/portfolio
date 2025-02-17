@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { scrollToId } from '../app.component';
 
 interface NavItem {
   href: string;
@@ -25,8 +26,34 @@ export class HeaderComponent {
   ];
 
   menuOpen = false;
+  active = true; // Default to true for large screens
+
+  constructor() {
+    this.updateActiveState();
+  }
 
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
+    if (window.innerWidth < 768) { // Check if on small screen
+      this.active = this.menuOpen; // Set active based on menu state
+    }
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event) {
+    this.updateActiveState();
+  }
+
+  private updateActiveState() {
+    this.active = window.innerWidth >= 768; // Set active to true on large screens
+  }
+
+  scrollToSection(id: string): void {
+    if (this.active) {
+      scrollToId(id)
+    }
+    if (this.toggleMenu && this.active) {
+      this.toggleMenu()
+    }
   }
 }

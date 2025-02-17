@@ -1,7 +1,7 @@
 <app-section title="Compétences">
   <div class="skills-grid">
     <div class="skill-row">
-      <div class="skill-item" *ngFor="let skill of skills">
+      <div class="skill-item" *ngFor="let skill of skills" [id]="skill.id.substring(1)">
         <div class="skill-header" [style.borderColor]="skill.color">
           <h3 [style.color]="skill.color">{{skill.title}}</h3>
         </div>

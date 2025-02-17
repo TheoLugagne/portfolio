@@ -16,3 +16,15 @@ import { FooterComponent } from "./footer/footer.component";
 export class AppComponent {
   title = 'portfolio';
 }
+
+export function scrollToId(id: string): void {
+  const element = document.querySelector(id);
+  if (element) {
+    const navbarHeight = 90; // Adjust this value based on your navbar height
+    const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+    window.scrollTo({
+      top: elementPosition - navbarHeight,
+      behavior: 'smooth' // Smooth scrolling
+    });
+  }
+}

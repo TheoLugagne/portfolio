@@ -66,6 +66,10 @@ main {
   max-width: 9.2rem;
 }
 
+.main-content {
+  padding-top: 80px;
+}
+
 .content {
   display: flex;
   justify-content: space-around;

@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
-import { SectionComponent } from '../section/section.component';
 
 @Component({
   selector: 'app-profile',
-  imports: [SectionComponent],
+  imports: [],
   templateUrl: './profile.component.html',
   styleUrl: './profile.component.scss'
 })
